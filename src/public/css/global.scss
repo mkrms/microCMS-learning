@@ -1,0 +1,22 @@
+@mixin sp {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin ov-pc {
+  @media screen and (min-width: 1367px) {
+    @content;
+  }
+}
+
+html {
+  font-size: calc(10 / 1366 * 100vw);
+
+  @include sp {
+    font-size: calc(10 / 375 * 100vw);
+  }
+}
+
+body {
+  font-size: 1.6rem;
+}
