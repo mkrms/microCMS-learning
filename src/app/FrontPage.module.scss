@@ -1,0 +1,12 @@
+.p-frontPage {
+  $this: &;
+
+  &__articleList {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      width: 30%;
+    }
+  }
+}

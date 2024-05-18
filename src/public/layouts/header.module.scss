@@ -1,0 +1,19 @@
+.l-header {
+  $header: &;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  padding-inline: 4rem;
+  box-shadow: 0 0.5rem 1rem #ccc;
+
+  &__logo {
+    font-weight: bold;
+  }
+  nav {
+  }
+}

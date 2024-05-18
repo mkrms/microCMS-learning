@@ -1,7 +1,7 @@
-import Header from "@/public/layouts/header"
-import Footer from "@/public/layouts/footer"
 import "@/public/css/destyle.css"
 import "@/public/css/global.scss"
+import Header from "@/public/layouts/header"
+import Footer from "@/public/layouts/footer"
 
 export const metadata = {
   title: 'Next.js',
@@ -14,12 +14,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" id="html">
       <body>
         <Header />
-        {children}
+        <div className="l-inner">
+          {children}
+        </div>
         <Footer />
       </body>
-    </html>
+    </html >
   )
 }

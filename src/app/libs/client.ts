@@ -33,10 +33,6 @@ export const getList = async (queries?: MicroCMSQueries) => {
     endpoint: "blog",
     queries,
   });
-
-  // データの取得が目視しやすいよう明示的に遅延効果を追加
-  await new Promise((resolve) => setTimeout(resolve, 3000));
-
   return listData;
 };
 
@@ -50,9 +46,5 @@ export const getDetail = async (
     contentId,
     queries,
   });
-
-  // データの取得が目視しやすいよう明示的に遅延効果を追加
-  await new Promise((resolve) => setTimeout(resolve, 3000));
-
   return detailData;
 };

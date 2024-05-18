@@ -1,10 +1,24 @@
 import React from 'react'
+import { getList } from '@/app/libs/client'
+import ArticleCard from '@/public/components/card/ArticleCard';
+import styles from './FrontPage.module.scss'
 
-
-const top = () => {
+const FrontPage = async () => {
+  const { contents } = await getList()
   return (
-    <div>top</div>
+    <div className={styles['p-frontPage']}>
+      <ul className={styles['p-frontPage__articleList']}>
+        {contents.map((post) => {
+          return (
+            <ArticleCard
+              {...post}
+            />
+          )
+        }
+        )}
+      </ul>
+    </div>
   )
 }
 
-export default top
+export default FrontPage
